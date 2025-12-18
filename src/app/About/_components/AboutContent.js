@@ -50,18 +50,18 @@ export default function AboutContent() {
         <div>
           <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-0 items-start lg:items-center">
             {/* Left Side - Image and Caption */}
-            <div className="w-full lg:w-1/2 flex flex-col">
-              <div className="w-full h-auto mb-4">
+            <div className="w-full lg:w-1/2 flex flex-col items-end lg:pr-0">
+              <div className="w-full h-auto mb-0 flex justify-end">
                 <Image
-                  src="/About/InnofarmsAi.png"
+                  src="/About/InnofarmsAi.svg"
                   alt="INNOGrowPod vertical farming unit"
-                  width={800}
-                  height={1000}
-                  className="w-full h-auto object-contain rounded-lg"
+                  width={1200}
+                  height={1500}
+                  className="w-full h-auto object-contain rounded-lg max-w-4xl -mr-20"
                   priority
                 />
               </div>
-              <div className="mt-2">
+              <div className="-mt-14 text-center w-full">
                 <p className="text-lg md:text-xl font-bold text-[#1E1E1E] font-spartan mb-1">
                   Nespresso of Vertical Farming
                 </p>
@@ -72,11 +72,11 @@ export default function AboutContent() {
             </div>
 
             {/* Right Side - Text Content */}
-            <div className="w-full lg:w-1/2 flex flex-col justify-center">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3D550C] font-spartan mb-6">
+            <div className="w-full lg:w-1/2 flex flex-col justify-center lg:pl-0 items-start">
+              <h2 className="text-3xl md:text-4xl lg:text-[54px] font-bold text-[#3D550C] font-spartan mb-2">
                 The INNOGrowPod™
               </h2>
-              <p className="text-base md:text-lg text-[#1E1E1E] font-roboto leading-relaxed">
+              <p className="text-xl md:text-2xl font-normal text-[#1E1E1E]/80 font-spartan max-w-[70%] leading-[34px] tracking-normal">
                 We provide the INNOGrowPod™, an AI-powered on-site farming unit for premium kitchens, enabling chefs to grow fresh, high-quality produce directly in their restaurants. This ensures superior flavor, sustainability, and control over ingredients from seed to plate. These pods are available in varied sizes from mini to max.
               </p>
             </div>

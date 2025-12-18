@@ -13,6 +13,7 @@ module.exports = {
         signika: ['"Signika"', 'sans-serif'],
         roboto: ['"Roboto"', 'sans-serif'],
         playfair: ['"Playfair Display"', 'serif'],
+        archivo: ['"Archivo"', 'sans-serif'],
       },
     },
   },

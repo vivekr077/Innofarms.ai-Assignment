@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, League_Spartan, Signika, Roboto, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, League_Spartan, Signika, Roboto, Playfair_Display, Montserrat, Archivo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -26,6 +26,17 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  variable: "--font-montserrat",
+});
+
+const archivo = Archivo({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  variable: "--font-archivo",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,7 +57,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${signika.variable} ${roboto.variable} ${playfair.variable} antialiased spartan.className`}
+        className={`${geistSans.variable} ${geistMono.variable} ${signika.variable} ${roboto.variable} ${playfair.variable} ${montserrat.variable} ${archivo.variable} antialiased spartan.className`}
       >
         <Header />
         {children}

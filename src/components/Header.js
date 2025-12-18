@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [isDesktopDropdownOpen, setIsDesktopDropdownOpen] = useState(false);
   const pathname = usePathname();
   
   const navLinks = [
@@ -15,7 +17,15 @@ export default function Header() {
     { href: "/chef-mixes", label: "Chef Mixes" },
     { href: "/traceability", label: "Traceability" },
     { href: "/chef-advisory", label: "Chef Advisory Council" },
-    { href: "/events", label: "Events & Blogs", hasDropdown: true },
+    { 
+      href: "/events", 
+      label: "Events & Blogs", 
+      hasDropdown: true,
+      dropdownItems: [
+        { href: "/events", label: "Events" },
+        { href: "/blogs", label: "Blogs" },
+      ]
+    },
   ];
   
   const isActive = (href) => pathname === href;
@@ -25,7 +35,7 @@ export default function Header() {
       <div className="w-full  flex items-center justify-between pr-15 pb-7">
         {/* Logo Section - Left */}
         <div className="flex items-center">
-          <div className="relative w-[100px] h-[97px] md:w-[142px] md:h-[138px] flex-shrink-0">
+          <Link href="/Home" className="relative w-[100px] h-[97px] md:w-[142px] md:h-[138px] flex-shrink-0">
             <Image
               src="/Home/logo.svg"
               alt="INNOFarms.AI Logo"
@@ -33,17 +43,22 @@ export default function Header() {
               height={138}
               className="object-contain"
             />
-          </div>
+          </Link>
         </div>
 
         {/* Navigation Links - Center */}
         <nav className="hidden lg:flex items-center gap-4 xl:gap-10">
           {navLinks.map((link) => (
-            <div key={link.href} className="relative group">
+            <div 
+              key={link.href} 
+              className="relative group"
+              onMouseEnter={() => link.hasDropdown && setIsDesktopDropdownOpen(true)}
+              onMouseLeave={() => link.hasDropdown && setIsDesktopDropdownOpen(false)}
+            >
               <Link
                 href={link.href}
                 className={` text-lg font-normal transition-colors ${
-                  isActive(link.href)
+                  isActive(link.href) || (link.hasDropdown && (isActive("/events") || isActive("/blogs")))
                     ? "text-[#E3572B]"
                     : "text-[#1E1E1E] hover:text-[#E3572B]"
                 } ${link.hasDropdown ? "flex items-center gap-1" : ""}`}
@@ -55,7 +70,29 @@ export default function Header() {
                   </svg>
                 )}
               </Link>
-              {/* Dropdown menu can be added here later */}
+              {/* Dropdown menu */}
+              {link.hasDropdown && link.dropdownItems && (
+                <div className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-50 ${
+                  isDesktopDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                }`}>
+                  <div className="py-2">
+                    {link.dropdownItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setIsDesktopDropdownOpen(false)}
+                        className={`block px-4 py-2 text-base font-normal transition-colors ${
+                          isActive(item.href)
+                            ? "text-[#E3572B] bg-[#E3572B]/10"
+                            : "text-[#1E1E1E] hover:text-[#E3572B] hover:bg-[#E3572B]/5"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </nav>
@@ -93,18 +130,63 @@ export default function Header() {
         <div className="lg:hidden bg-white border-t border-gray-200">
           <nav className="w-full px-4 py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-base font-normal transition-colors ${
-                  isActive(link.href)
-                    ? "text-[#E3572B]"
-                    : "text-[#1E1E1E] hover:text-[#E3572B]"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
+              <div key={link.href}>
+                {link.hasDropdown && link.dropdownItems ? (
+                  <div>
+                    <button
+                      onClick={() => setOpenDropdown(openDropdown === link.href ? null : link.href)}
+                      className={`w-full text-left text-base font-normal transition-colors flex items-center justify-between ${
+                        isActive(link.href) || (isActive("/events") || isActive("/blogs"))
+                          ? "text-[#E3572B]"
+                          : "text-[#1E1E1E]"
+                      }`}
+                    >
+                      {link.label}
+                      <svg 
+                        className={`w-4 h-4 transition-transform ${openDropdown === link.href ? 'rotate-180' : ''}`}
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {openDropdown === link.href && (
+                      <div className="pl-4 mt-2 flex flex-col gap-2">
+                        {link.dropdownItems.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className={`text-sm font-normal transition-colors ${
+                              isActive(item.href)
+                                ? "text-[#E3572B]"
+                                : "text-[#1E1E1E]"
+                            }`}
+                            onClick={() => {
+                              setIsMenuOpen(false);
+                              setOpenDropdown(null);
+                            }}
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={`text-base font-normal transition-colors ${
+                      isActive(link.href)
+                        ? "text-[#E3572B]"
+                        : "text-[#1E1E1E] hover:text-[#E3572B]"
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )}
+              </div>
             ))}
             <div className="flex flex-col gap-3 pt-2 border-t border-gray-200">
               <Link

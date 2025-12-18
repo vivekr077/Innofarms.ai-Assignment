@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function ContactInfo() {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-white mb-16">
       <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto">
           {/* Phone Number Card */}
           <div className="bg-white border-2 border-[#3D550C] rounded-lg p-3 md:p-8">
             <div className="flex items-center gap-3 mb-4">

@@ -7,6 +7,7 @@ import TraceCropJourney from "./_components/TraceCropJourney";
 import ProduceCategories from "./_components/ProduceCategories";
 import GetOurGreens from "./_components/GetOurGreens";
 import GetInTouch from "@/components/GetInTouch";
+import SubscribeBanner from "@/components/SubscribeBanner";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <GreensLeadingTrend />
       <FeedbackFromChefs />
       <TechnologyCultivates />
+      <SubscribeBanner />
       <TraceCropJourney />
       <ProduceCategories />
       <GetOurGreens />

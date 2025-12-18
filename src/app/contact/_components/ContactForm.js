@@ -7,7 +7,7 @@ export default function ContactForm() {
     <section id="contact-form" className="w-full py-8 md:py-10 lg:py-20 bg-white">
       <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">
         {/* Main Heading */}
-        <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold font-spartan text-[#3D550C] text-center mb-2">
+        <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold font-spartan text-[#3D550C] text-center mb-2">
           Get in Touch
         </h2>
 
@@ -17,7 +17,7 @@ export default function ContactForm() {
         </p>
 
         {/* Two Column Layout */}
-        <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto rounded-lg overflow-visible items-stretch">
+        <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto rounded-lg overflow-visible items-stretch">
           {/* Left Column - Image */}
           <div className="relative w-full lg:w-1/2 min-h-[400px] lg:min-h-0">
             <Image

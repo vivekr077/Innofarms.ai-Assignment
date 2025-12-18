@@ -3,6 +3,7 @@ import AboutContent from "./_components/AboutContent";
 import FeedbackFromChefs from "./_components/FeedbackFromChefs";
 import FAQ from "./_components/FAQ";
 import GetInTouch from "@/components/GetInTouch";
+import SubscribeBanner from "@/components/SubscribeBanner";
 
 export default function AboutPage() {
   return (
@@ -10,6 +11,7 @@ export default function AboutPage() {
       <AboutBanner />
       <AboutContent />
       <FeedbackFromChefs />
+      <SubscribeBanner />
       <FAQ />
       <GetInTouch />
     </main>

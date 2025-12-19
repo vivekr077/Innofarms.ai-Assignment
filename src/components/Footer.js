@@ -168,7 +168,7 @@ export default function Footer() {
                     </h3>
                     <ul className="space-y-1">
                       <li>
-                        <Link href="/about" className="text-[#1E1E1E] hover:text-[#3D550C] transition-colors font-outfit text-lg font-normal">
+                        <Link href="/About" className="text-[#1E1E1E] hover:text-[#3D550C] transition-colors font-outfit text-lg font-normal">
                           About Us
                         </Link>
                       </li>

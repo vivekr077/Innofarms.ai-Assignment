@@ -12,7 +12,7 @@ export default function Header() {
   const pathname = usePathname();
   
   const navLinks = [
-    { href: "/about", label: "About Us" },
+    { href: "/About", label: "About Us" },
     { href: "/produce", label: "Our Produce" },
     { href: "/chef-mixes", label: "Chef Mixes" },
     { href: "/traceability", label: "Traceability" },

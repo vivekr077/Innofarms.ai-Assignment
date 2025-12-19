@@ -64,7 +64,7 @@ export default function Card({ image, alt, category, productName, description, n
 
         {/* Nutrition Info Button - Half inside, half outside */}
         <Link
-          href={nutritionInfoHref || "#"}
+          href={arrowHref || "#"}
           className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-[#E3572B] border border-[#A5E32B] text-white px-6 py-3 rounded-full hover:bg-[#D2691E] transition-colors duration-300 font-medium text-base md:text-lg text-center font-outfit z-10 whitespace-nowrap"
         >
           Nutrition Info

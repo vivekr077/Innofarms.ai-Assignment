@@ -46,13 +46,13 @@ export default function FeedbackFromChefs() {
               key={index}
               className="rounded-[10px] overflow-hidden transition-shadow duration-300 flex flex-col w-full"
             >
-              <div className="w-[400px] h-[208px] md:h-[208px] overflow-hidden rounded-[10px]">
+              <div className="relative w-full h-[208px] md:h-[208px] overflow-hidden rounded-[10px]">
                 <Image
                   src={feedback.image}
                   alt={feedback.title}
-                  width={400}
-                  height={300}
-                  className="object-cover w-full h-full"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
                   priority={index < 3}
                 />
               </div>

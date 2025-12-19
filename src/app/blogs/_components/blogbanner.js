@@ -21,9 +21,9 @@ export default function BlogBanner() {
         <div className="relative w-[85%] rounded-[30px] px-8 md:px-12 lg:px-16 pt-4 md:pt-6 lg:pt-8 pb-6 md:pb-12 lg:pb-16 mb-8 overflow-hidden flex flex-col items-center justify-start">
           <div className="absolute inset-0 bg-[#3D550C]/20 backdrop-blur-md rounded-[30px]"></div>
           <h1 className="relative z-10 text-4xl md:text-5xl font-bold text-white font-spartan text-center mb-2">
-            Our Blogs
+          Our Blogs
           </h1>
-          <h1 className="relative z-10 text-3xl md:text-4xl font-normal text-[#DCBC88] font-spartan text-center">
+          <h1 className="relative z-10 text-2xl lg:text-3xl font-normal text-[#DCBC88] font-spartan text-center">
             Read the latest culinary stories from experts
           </h1>
         </div>

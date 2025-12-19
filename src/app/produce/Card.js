@@ -30,7 +30,7 @@ export default function Card({ image, alt, category, productName, description, n
 
       {/* Product Image Area */}
       <div className="relative z-10 w-full overflow-hidden rounded-t-[30px] p-4 flex justify-center">
-        <div className="w-[396.66px] h-[293.63px] rounded-[20px] overflow-hidden">
+        <div className="w-[280px] h-[207px] sm:w-[320px] sm:h-[237px] md:w-[360px] md:h-[267px] lg:w-[396.66px] lg:h-[293.63px] rounded-[20px] overflow-hidden">
           <Image
             src={image}
             alt={alt}
@@ -43,7 +43,7 @@ export default function Card({ image, alt, category, productName, description, n
       </div>
 
       {/* Product Details Area */}
-      <div className="relative z-10 px-6 pb-8 flex flex-col">
+      <div className="relative z-10 px-6 pb-4 flex flex-col flex-1">
         {/* Category Label */}
         <div className="flex items-center gap-2 mb-2">
           <span className="w-2 h-2 bg-[#3D550C] rounded-full"></span>
@@ -53,19 +53,19 @@ export default function Card({ image, alt, category, productName, description, n
         </div>
 
         {/* Product Name */}
-        <h3 className="text-xl md:text-[26px] font-medium text-[#E3572B] font-signika">
+        <h3 className="text-xl md:text-[26px] font-medium text-[#E3572B] font-signika leading-tight">
           {productName}
         </h3>
-        <hr className=" my-2 border-t-2 border-[#404A3D1A]"/>
+        <hr className="my-2 border-t-2 border-[#404A3D1A]"/>
         {/* Description */}
-        <p className="text-sm md:text-base font-normal max-w-[90%] line-clamp-2 text-[#666666] mb-1 mt-1 font-roboto leading-relaxed">
+        <p className="text-sm md:text-base font-normal max-w-[90%] line-clamp-2 text-[#666666] mb-4 mt-1 font-roboto leading-relaxed">
           {description}
         </p>
 
         {/* Nutrition Info Button - Half inside, half outside */}
         <Link
           href={nutritionInfoHref || "#"}
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-[#E3572B] border border-[#A5E32B] text-white px-6 py-3 rounded-full hover:bg-[#D2691E] transition-colors duration-300 font-medium text-base md:text-lg text-center font-outfit z-10"
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-[#E3572B] border border-[#A5E32B] text-white px-6 py-3 rounded-full hover:bg-[#D2691E] transition-colors duration-300 font-medium text-base md:text-lg text-center font-outfit z-10 whitespace-nowrap"
         >
           Nutrition Info
         </Link>
@@ -74,14 +74,14 @@ export default function Card({ image, alt, category, productName, description, n
       {/* Arrow Icon - Bottom Right in the space of the shape */}
       <Link
         href={arrowHref || "#"}
-        className="absolute bottom-0 right-0 w-12 h-12 bg-[#3D550C] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity shadow-sm z-20"
+        className="absolute bottom-0 right-0 w-6 h-6 sm:w-8 sm:h-8 md:w-8 md:h-8 lg:w-12 lg:h-12 bg-[#3D550C] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity shadow-sm z-20"
       >
         <Image
           src="/OurProduce/arrowicon.svg"
           alt="Arrow icon"
           width={20}
           height={20}
-          className="w-5 h-5"
+          className="w-4 h-4 sm:w-[14px] sm:h-[14px] md:w-[16px] md:h-[16px] lg:w-5 lg:h-5"
         />
       </Link>
     </div>

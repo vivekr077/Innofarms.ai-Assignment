@@ -15,7 +15,7 @@ export default function LeafyGreens() {
       image: "/OurProduce/LeafyGreens/speciality Chef's Mix.jpg",
       alt: "Specialty Chef's Mix",
       category: "LEAFY GREENS",
-      productName: "Specialty Chef's Mix (Custom)",
+      productName: "Specialty Chef's Mix",
       description: "A wholesome mix of leafy greens combining crunch, color, and refreshing aroma.",
       nutritionInfoHref: "/nutrition/specialty-chefs-mix",
       arrowHref: "/produce/specialty-chefs-mix",
@@ -153,7 +153,7 @@ export default function LeafyGreens() {
           `}</style>
           <div className="flex gap-6 md:gap-8 min-w-max px-4 items-start">
             {products.map((product, index) => (
-              <div key={index} className="flex-shrink-0 w-[396.66px]">
+              <div key={index} className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[396.66px]">
                 <Card
                   image={product.image}
                   alt={product.alt}

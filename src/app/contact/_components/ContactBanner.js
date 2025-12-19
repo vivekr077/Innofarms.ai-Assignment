@@ -23,7 +23,7 @@ export default function ContactBanner() {
           <h1 className="relative z-10 text-4xl md:text-5xl font-bold text-white font-spartan text-center mb-2">
             Contact Us
           </h1>
-          <h1 className="relative z-10 text-3xl md:text-4xl font-normal text-[#DCBC88] font-spartan text-center">Have questions or orders? Get in touch with us today.</h1>
+          <h1 className="relative z-10 text-2xl lg:text-3xl font-normal text-[#DCBC88] font-spartan text-center">Have questions or orders? Get in touch with us today.</h1>
         </div>
 
         {/* Contact Us Button */}

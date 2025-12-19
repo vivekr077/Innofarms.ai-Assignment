@@ -13,7 +13,7 @@ export default function BabyGreens() {
       image: "/OurProduce/BabyGreens/Speciality Chef's Mix.jpg",
       alt: "Specialty Chef's Mix",
       category: "BABY GREENS",
-      productName: "Specialty Chef's Mix (Custom)",
+      productName: "Specialty Chef's Mix",
       description: "A wholesome mix combining earthy spinach, hearty kale, and zesty sorrel vein leaf.",
       nutritionInfoHref: "/nutrition/specialty-chefs-mix",
       arrowHref: "/produce/specialty-chefs-mix",
@@ -115,7 +115,7 @@ export default function BabyGreens() {
           `}</style>
           <div className="flex gap-6 md:gap-8 min-w-max px-4 items-start">
             {products.map((product, index) => (
-              <div key={index} className="flex-shrink-0 w-[396.66px]">
+              <div key={index} className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[396.66px]">
                 <Card
                   image={product.image}
                   alt={product.alt}

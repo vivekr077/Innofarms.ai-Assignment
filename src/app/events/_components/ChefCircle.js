@@ -48,9 +48,9 @@ export default function ChefCircle() {
         {/* Image Gallery and Text Container - Same Width */}
         <div className="flex flex-col items-center mx-auto max-w-[1231px]">
           {/* Image Gallery - Three Images */}
-          <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center mb-12 md:mb-12 w-full">
+          <div className="flex flex-wrap gap-6 md:gap-8 justify-center items-center mb-12 md:mb-12 w-full">
             {images.map((image, index) => (
-              <div key={index} className="relative w-full sm:w-[280px] md:w-[320px] lg:w-[389px] aspect-[389/375] rounded-lg overflow-hidden shadow-lg flex-shrink-0">
+              <div key={index} className="relative w-[250px] sm:w-[280px] md:w-[300px] lg:w-[389px] aspect-[389/375] rounded-lg overflow-hidden shadow-lg mx-auto sm:mx-0">
                 <Image
                   src={image.src}
                   alt={image.alt}

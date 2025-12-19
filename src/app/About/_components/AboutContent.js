@@ -10,7 +10,7 @@ export default function AboutContent() {
             {/* Left Side - Text Content */}
             <div className="w-full lg:w-1/2 flex flex-col">
               <div className="mb-6">
-                <h2 className="text-2xl md:text-3xl lg:text-[54px] font-bold text-[#3D550C] font-spartan">
+                <h2 className="text-2xl md:text-4xl lg:text-[54px] font-bold text-[#3D550C] font-spartan">
                   About
                 </h2>
                 <h3 className="text-3xl md:text-4xl lg:text-[54px] font-bold text-[#3D550C] font-spartan">
@@ -32,7 +32,7 @@ export default function AboutContent() {
 
             {/* Right Side - Image */}
             <div className="w-full lg:w-1/2 flex items-center justify-center">
-              <div className="w-full max-w-xl h-auto">
+              <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl h-auto mx-auto">
                 <Image
                   src="/About/FreshFoodImg.jpg"
                   alt="Fresh food presentation with leafy greens"
@@ -50,14 +50,14 @@ export default function AboutContent() {
         <div>
           <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-0 items-start lg:items-center">
             {/* Left Side - Image and Caption */}
-            <div className="w-full lg:w-1/2 flex flex-col items-end lg:pr-0">
-              <div className="w-full h-auto mb-0 flex justify-end">
+            <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-end lg:pr-0">
+              <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-4xl h-auto mb-0 mx-auto lg:mx-0 lg:flex lg:justify-end">
                 <Image
                   src="/About/InnofarmsAi.svg"
                   alt="INNOGrowPod vertical farming unit"
                   width={1200}
                   height={1500}
-                  className="w-full h-auto object-contain rounded-lg max-w-4xl -mr-20"
+                  className="w-full h-auto object-contain rounded-lg lg:-mr-20"
                   priority
                 />
               </div>
@@ -76,7 +76,7 @@ export default function AboutContent() {
               <h2 className="text-3xl md:text-4xl lg:text-[54px] font-bold text-[#3D550C] font-spartan mb-2">
                 The INNOGrowPod™
               </h2>
-              <p className="text-xl md:text-2xl font-normal text-[#1E1E1E]/80 font-spartan max-w-[70%] leading-[34px] tracking-normal">
+              <p className="text-xl md:text-2xl font-normal text-[#1E1E1E]/80 font-spartan lg:max-w-[70%] leading-[34px] tracking-normal">
                 We provide the INNOGrowPod™, an AI-powered on-site farming unit for premium kitchens, enabling chefs to grow fresh, high-quality produce directly in their restaurants. This ensures superior flavor, sustainability, and control over ingredients from seed to plate. These pods are available in varied sizes from mini to max.
               </p>
             </div>

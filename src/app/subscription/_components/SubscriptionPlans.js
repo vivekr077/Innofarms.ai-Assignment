@@ -30,11 +30,11 @@ export default function SubscriptionPlans() {
         </p>
 
         {/* Subscription Plan Cards */}
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center mb-12 md:mb-12">
+        <div className="flex flex-wrap gap-6 md:gap-8 justify-center items-center mb-12 md:mb-12">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className="bg-[#DCBC8870]/80 rounded-3xl p-8 md:p-10 flex flex-col items-center justify-center w-full md:w-auto min-w-[280px] max-w-[320px] shadow-[0_4px_14px_0_rgba(28,66,161,0.04)]"
+              className="bg-[#DCBC8870]/80 rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col items-center justify-center w-full sm:w-[280px] md:w-[300px] lg:w-auto lg:min-w-[280px] lg:max-w-[320px] shadow-[0_4px_14px_0_rgba(28,66,161,0.04)]"
             >
               {/* Plan Name */}
               <h3 className="text-3xl md:text-4xl font-bold text-[#3D550C] font-archivo text-center">

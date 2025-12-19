@@ -3,17 +3,18 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex items-center">
+    <section className="relative w-full min-h-screen flex items-center max-lg:pt-10 max-lg:pb-10 ">
       {/* Blurred Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/Home/homebanner.jpg"
+          src="/Home/Banner/blur.jpg"
           alt="Background"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 backdrop-blur-3xl"></div>
+        {/* Overlay for better text readability */}
+        {/* <div className="absolute inset-0 bg-black/50"></div> */}
       </div>
 
       {/* Content Container */}
@@ -58,7 +59,7 @@ export default function Hero() {
           </div>
 
           {/* Right Side - Image Content */}
-          <div className="relative flex justify-center lg:justify-end col-span-1 justify-self-end w-full">
+          <div className=" max-lg:hidden relative flex justify-center lg:justify-end col-span-1 justify-self-end w-full">
             <div className="relative w-full">
               <div className="relative rounded-lg shadow-2xl overflow-hidden">
                 <Image

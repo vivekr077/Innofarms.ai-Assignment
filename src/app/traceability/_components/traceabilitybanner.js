@@ -23,7 +23,7 @@ export default function TraceabilityBanner() {
           <h1 className="relative z-10 text-4xl md:text-5xl font-bold text-white font-spartan text-center mb-2">
             Traceability
           </h1>
-          <h1 className="relative z-10 text-3xl md:text-4xl font-normal text-[#DCBC88] font-spartan text-center">
+          <h1 className="relative z-10 text-2xl lg:text-3xl md:text-4xl font-normal text-[#DCBC88] font-spartan text-center">
             Instant access to crop data in one scan
           </h1>
         </div>

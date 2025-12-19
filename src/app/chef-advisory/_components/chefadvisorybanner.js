@@ -23,7 +23,7 @@ export default function ChefAdvisoryBanner() {
           <h1 className="relative z-10 text-4xl md:text-5xl font-bold text-white font-spartan text-center mb-2">
             Chef Advisory Council
           </h1>
-          <h1 className="relative z-10 text-3xl md:text-4xl font-normal text-[#DCBC88] font-spartan text-center">
+          <h1 className="relative z-10 text-2xl lg:text-3xl md:text-4xl font-normal text-[#DCBC88] font-spartan text-center">
             Expert Guidance, Inspiring Culinary Excellence
           </h1>
         </div>

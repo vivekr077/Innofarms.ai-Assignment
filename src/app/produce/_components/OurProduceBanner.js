@@ -23,7 +23,7 @@ export default function OurProduceBanner() {
           <h1 className="relative z-10 text-4xl md:text-5xl font-bold text-white font-spartan text-center mb-2">
             Our Produce
           </h1>
-          <h1 className="relative z-10 text-3xl md:text-4xl font-normal text-[#DCBC88] font-spartan text-center">Every crop cultivated with care, freshness, and precision.</h1>
+          <h1 className="relative z-10 max-md:text-xl max-md:mb-4 text-3xl md:text-4xl font-normal text-[#DCBC88] font-spartan text-center">Every crop cultivated with care, freshness, and precision.</h1>
         </div>
 
         {/* Explore Our Produce Button */}

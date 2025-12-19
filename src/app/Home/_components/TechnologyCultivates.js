@@ -81,9 +81,9 @@ export default function TechnologyCultivates() {
                 </div>
               </div>
 
-              <p className="text-sm md:text-base text-[#404A3DCC]/80 leading-relaxed font-roboto"><p className="text-lg md:text-xl font-normal text-[#1E1E1E] font-signika">
+              <p className="text-lg md:text-xl font-normal text-[#1E1E1E] font-signika">
                     {tech.subtitle}
-                  </p></p>
+                  </p>
               {/* Description */}
               <p className="text-lg md:text-xl text-[#404A3DCC]/80 leading-relaxed font-roboto">
                 {tech.description}

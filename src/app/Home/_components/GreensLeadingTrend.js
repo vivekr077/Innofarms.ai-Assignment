@@ -46,7 +46,7 @@ export default function GreensLeadingTrend() {
               className=" rounded-[30px] overflow-hidden transition-shadow duration-300 flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] max-w-[320px] flex flex-col"
             >
               {/* Image - Rounded on all corners */}
-              <div className="w-full h-[400px] overflow-hidden rounded-[30px]">
+              <div className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-[30px]">
                 <Image
                   src={green.image}
                   alt={green.title}

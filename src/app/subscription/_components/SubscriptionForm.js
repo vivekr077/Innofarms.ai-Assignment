@@ -22,14 +22,14 @@ export default function SubscriptionForm() {
           <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-0">
             
             {/* Laptop Image */}
-            <div className="flex-shrink-0 lg:-mr-32">
+            <div className="flex-shrink-0 w-full flex justify-center items-center lg:justify-start lg:w-auto lg:-mr-32">
               <Image
                 src="/Subscription/subscriptiondesktopimg.svg"
                 alt="Subscription form on laptop"
                 width={1000}
                 height={750}
                 priority
-                className="block w-auto h-auto max-w-[700px]"
+                className="block w-auto h-auto max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[700px] self-center"
               />
             </div>
 

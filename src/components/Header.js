@@ -32,15 +32,15 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white relative">
-      <div className="w-full  flex items-center justify-between pr-15 pb-7">
+      <div className="w-full  flex items-center justify-between lg:pr-8 pb-1 lg:pb-7">
         {/* Logo Section - Left */}
         <div className="flex items-center">
-          <Link href="/Home" className="relative w-[100px] h-[97px] md:w-[142px] md:h-[138px] flex-shrink-0">
+          <Link href="/Home" className="relative w-[70px] h-[68px] md:w-[100px] md:h-[97px] flex-shrink-0">
             <Image
               src="/Home/logo.svg"
               alt="INNOFarms.AI Logo"
-              width={142}
-              height={138}
+              width={100}
+              height={97}
               className="object-contain"
             />
           </Link>
@@ -98,7 +98,8 @@ export default function Header() {
         </nav>
 
         {/* CTA Buttons - Right */}
-        <div className="hidden md:flex items-center gap-2 lg:gap-3">
+        {!isMenuOpen && (
+          <div className="hidden lg:flex items-center gap-2 lg:gap-3">
           <Link
             href="/subscription"
             className="px-4 lg:px-2 py-3 border border-[#E3572B] text-[#E3572B] font-semibold rounded-full hover:bg-[#E3572B] hover:text-white transition-colors whitespace-nowrap text-sm lg:text-base"
@@ -111,7 +112,8 @@ export default function Header() {
           >
             Contact us
           </Link>
-        </div>
+          </div>
+        )}
 
         {/* Mobile Menu Button */}
         <button
@@ -191,14 +193,14 @@ export default function Header() {
             <div className="flex flex-col gap-3 pt-2 border-t border-gray-200">
               <Link
                 href="/subscription"
-                className="px-6 py-2 border-2 border-[#ff6b47] text-[#ff6b47] rounded-full hover:bg-[#ff6b47] hover:text-white transition-colors text-center"
+                className="px-6 py-3 border border-[#E3572B] text-[#E3572B] font-semibold rounded-full hover:bg-[#E3572B] hover:text-white transition-colors text-center text-sm lg:text-base"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Subscription Plan
               </Link>
               <Link
                 href="/contact"
-                className="px-6 py-2 border-2 border-[#90c695] text-[#90c695] rounded-full hover:bg-[#90c695] hover:text-white transition-colors text-center"
+                className="px-6 py-3 border border-[#3D550C] text-[#3D550C] font-semibold rounded-full hover:bg-[#3D550C] hover:text-white transition-colors text-center text-sm lg:text-base"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact us

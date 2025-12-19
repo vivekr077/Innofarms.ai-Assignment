@@ -25,14 +25,14 @@ export default function BlogCards() {
       <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto">
           {blogPosts.map((post, index) => (
-            <div key={index} className="flex-1 flex flex-col max-w-md mx-auto md:max-w-none">
+            <div key={index} className="group flex-1 flex flex-col max-w-md mx-auto md:max-w-none hover:scale-105 transition-all duration-300 cursor-pointer">
               {/* Image Block - Separate from content, no border */}
-              <div className="relative w-full aspect-[4/3] overflow-hidden rounded-t-lg mb-4">
+              <div className="relative w-full aspect-[4/3] overflow-hidden rounded-t-lg mb-4 transition-all duration-300 group-hover:shadow-xl">
                 <Image
                   src={post.image}
                   alt={post.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                   priority={index < 2}
                 />
               </div>
@@ -46,15 +46,15 @@ export default function BlogCards() {
                     alt="Calendar icon"
                     width={16}
                     height={16}
-                    className="w-4 h-4"
+                    className="w-4 h-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
                   />
-                  <span className="text-xs font-normal text-[#666666] font-roboto">
+                  <span className="text-xs font-normal text-[#666666] font-roboto transition-colors duration-300 group-hover:text-[#404A3D]">
                     {post.date}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-[#404A3D] font-signika leading-9">
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-[#404A3D] font-signika leading-9 transition-colors duration-300 group-hover:text-[#3D550C]">
                   {post.title}
                 </h3>
               </div>

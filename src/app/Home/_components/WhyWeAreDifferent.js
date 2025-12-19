@@ -57,26 +57,28 @@ export default function WhyWeAreDifferent() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-[#FFF9F1] hover:bg-[#DCBC88]/44 rounded-[30px] border border-[#F9C06A]/42 py-6 px-6 transition-colors duration-300 cursor-pointer flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px]"
+              className="group bg-[#FFF9F1] hover:bg-[#DCBC88]/44 rounded-[30px] border border-[#F9C06A]/42 py-6 px-6 transition-all duration-300 cursor-pointer flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px] hover:scale-105 hover:shadow-xl hover:border-[#3D550C]/60"
             >
               {/* Icon */}
               <div className="mb-4 flex justify-center">
-                <Image
-                  src={feature.icon}
-                  alt={feature.title}
-                  width={60}
-                  height={60}
-                  className="w-16 h-16 md:w-20 md:h-20"
-                />
+                <div className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                  <Image
+                    src={feature.icon}
+                    alt={feature.title}
+                    width={60}
+                    height={60}
+                    className="w-16 h-16 md:w-20 md:h-20 transition-all duration-300"
+                  />
+                </div>
               </div>
 
               {/* Title */}
-              <h3 className="text-lg md:text-2xl font-bold text-[#3D550C] mb-5 text-center leading-none tracking-normal font-spartan">
+              <h3 className="text-lg md:text-2xl font-bold text-[#3D550C] mb-5 text-center leading-none tracking-normal font-spartan group-hover:text-[#2d3f0a] transition-colors duration-300">
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm md:text-base font-normal text-gray-700 text-center leading-none tracking-normal font-spartan">
+              <p className="text-sm md:text-base font-normal text-gray-700 text-center leading-none tracking-normal font-spartan group-hover:text-[#404A3D] transition-colors duration-300">
                 {feature.description}
               </p>
             </div>
@@ -90,7 +92,7 @@ export default function WhyWeAreDifferent() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <button className="text-xl md:text-4xl font-bold text-[#3D550C] font-spartan hover:opacity-80 transition-opacity">
+          <button className="text-xl md:text-4xl font-bold text-[#3D550C] font-spartan hover:opacity-80 hover:scale-110 transition-all duration-300 cursor-pointer">
             Join Us Today!
           </button>
         </div>

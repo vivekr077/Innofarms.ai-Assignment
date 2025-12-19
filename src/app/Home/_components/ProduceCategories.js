@@ -53,7 +53,7 @@ export default function ProduceCategories() {
             return (
               <div
                 key={index}
-                className={`bg-[#FFF9F1] rounded-lg overflow-visible transition-shadow duration-300 flex-shrink-0 ${cardWidth} max-w-[300px] flex flex-col border-1 border-[#F9C06A]/42 relative`}
+                className={`group bg-[#FFF9F1] rounded-lg overflow-visible transition-all duration-300 flex-shrink-0 ${cardWidth} max-w-[300px] flex flex-col border-1 border-[#F9C06A]/42 relative hover:scale-105 hover:shadow-xl cursor-pointer hover:border-[#3D550C]/60`}
               >
                 {/* Image */}
                 <div className="w-full overflow-hidden rounded-t-lg">
@@ -62,7 +62,7 @@ export default function ProduceCategories() {
                     alt={category.title}
                     width={300}
                     height={280}
-                    className="object-contain w-full h-auto"
+                    className="object-contain w-full h-auto transition-transform duration-500 group-hover:scale-110"
                     priority={index < 3}
                   />
                 </div>
@@ -70,7 +70,7 @@ export default function ProduceCategories() {
                 {/* Content */}
                 <div className="p-5 flex-1 flex flex-col pb-10">
                   {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-bold text-[#3D550C] mb-1 text-center font-playfair">
+                  <h3 className="text-xl md:text-2xl font-bold text-[#3D550C] mb-1 text-center font-playfair group-hover:scale-105 transition-transform duration-300">
                     {category.title}
                   </h3>
                 </div>
@@ -78,7 +78,7 @@ export default function ProduceCategories() {
                 {/* View Now Button - Half inside, half outside, positioned relative to card */}
                 <Link
                   href={`/produce/${category.title.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-[#3D550C] text-white px-6 py-3 rounded-lg hover:bg-[#2d3f0a] transition-colors duration-300 font-medium font-playfair text-center z-10"
+                  className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-[#3D550C] text-white px-6 py-3 rounded-lg hover:bg-[#2d3f0a] group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 font-medium font-playfair text-center z-10"
                 >
                   View Now
                 </Link>

@@ -81,7 +81,7 @@ export default function GetInTouch() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="bg-[#3D550C] text-white px-8 py-3 rounded-full hover:bg-[#2d3f0a] transition-colors duration-300 font-bold font-playfair flex items-center gap-2"
+              className="bg-[#3D550C] text-white px-8 py-3 rounded-full font-bold font-playfair flex items-center gap-2"
             >
               Submit Now
               <svg

@@ -23,7 +23,7 @@ export default function Footer() {
                     alt="Phone"
                     width={20}
                     height={20}
-                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 hover:rotate-4 hover:scale-110 transition-all duration-300"
                   />
                 </div>
                 <span className="text-[#FFFFFF] font-signika text-xs sm:text-sm md:text-base font-normal whitespace-nowrap">
@@ -39,7 +39,7 @@ export default function Footer() {
                     alt="Email"
                     width={20}
                     height={20}
-                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 hover:rotate-4 hover:scale-110 transition-all duration-300"
                   />
                 </div>
                 <span className="text-[#FFFFFF] font-signika text-xs sm:text-sm md:text-base font-normal break-all sm:break-normal">
@@ -79,7 +79,7 @@ export default function Footer() {
                 <div className="flex items-center gap-3">
                   <Link
                     href="#"
-                    className="w-10 h-10 bg-[#DCBC88]/44 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+                    className="w-10 h-10 bg-[#DCBC88]/44 rounded-full flex items-center justify-center hover:opacity-80 hover:scale-120 transition-all duration-300"
                   >
                     <Image
                       src="/Home/Footer/fbIcon.svg"
@@ -91,7 +91,7 @@ export default function Footer() {
                   </Link>
                   <Link
                     href="#"
-                    className="w-10 h-10 bg-[#DCBC88]/44 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+                    className="w-10 h-10 bg-[#DCBC88]/44 rounded-full flex items-center justify-center hover:opacity-80 hover:scale-120 transition-all duration-300"
                   >
                     <Image
                       src="/Home/Footer/XIcon.svg"
@@ -103,7 +103,7 @@ export default function Footer() {
                   </Link>
                   <Link
                     href="#"
-                    className="w-10 h-10 bg-[#DCBC88]/44 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+                    className="w-10 h-10 bg-[#DCBC88]/44 rounded-full flex items-center justify-center hover:opacity-80 hover:scale-120 transition-all duration-300"
                   >
                     <Image
                       src="/Home/Footer/linkedInIcon.svg"
@@ -115,7 +115,7 @@ export default function Footer() {
                   </Link>
                   <Link
                     href="#"
-                    className="w-10 h-10 bg-[#DCBC88]/44 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+                    className="w-10 h-10 bg-[#DCBC88]/44 rounded-full flex items-center justify-center hover:opacity-80 hover:scale-120 transition-all duration-300"
                   >
                     <Image
                       src="/Home/Footer/InstaIcon.svg"

@@ -34,14 +34,14 @@ export default function TraceCropJourney() {
           {journeyImages.map((image, index) => (
             <div
               key={index}
-              className="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-1rem)] max-w-[400px] rounded-lg"
+              className="group w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-1rem)] max-w-[400px] rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
             >
               <Image
                 src={image.src}
                 alt={image.alt}
                 width={400}
                 height={400}
-                className="object-contain w-full h-auto rounded-lg"
+                className="object-contain w-full h-auto rounded-lg transition-transform duration-500 group-hover:scale-110"
                 priority={index < 2}
               />
             </div>

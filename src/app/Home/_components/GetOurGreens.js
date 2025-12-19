@@ -42,7 +42,7 @@ export default function GetOurGreens() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="bg-[#FFF9F1] rounded-lg overflow-visible transition-shadow duration-300 flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-[300px] flex flex-col relative"
+              className="group bg-[#FFF9F1] rounded-lg overflow-visible transition-all duration-300 flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-[300px] flex flex-col relative hover:scale-105 hover:shadow-xl cursor-pointer"
             >
               {/* Image Container with Step Number Badge */}
               <div className="w-full relative bg-[#FFF9F1]">
@@ -52,22 +52,22 @@ export default function GetOurGreens() {
                     alt={`Step ${step.stepNumber}`}
                     width={300}
                     height={250}
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                     priority={index < 2}
                   />
                 </div>
                 
                 {/* Step Number Badge - Centered at top, half inside, half outside */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-[#FF6B35] rounded-full flex items-center justify-center text-center shadow-lg z-10">
-                  <span className="text-white font-bold text-5xl font-spartan">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-[#FF6B35] rounded-full flex items-center justify-center text-center shadow-lg z-10 group-hover:scale-110 group-hover:bg-[#E3572B] group-hover:shadow-xl transition-all duration-300">
+                  <span className="text-white font-bold text-5xl font-spartan group-hover:scale-110 transition-transform duration-300">
                     {step.stepNumber}
                   </span>
                 </div>
               </div>
 
               {/* Text Description */}
-              <div className="p-5 flex-1 bg-[#FFF9F1] border-2 border-[#F9C06A6B]/42 rounded-b-lg">
-                <p className="text-base md:text-lg font-medium text-[#3D550C]/80 leading-[100%] tracking-normal font-spartan text-left">
+              <div className="p-5 flex-1 bg-[#FFF9F1] border-2 border-[#F9C06A6B]/42 rounded-b-lg group-hover:border-[#3D550C]/60 transition-colors duration-300">
+                <p className="text-base md:text-lg font-medium text-[#3D550C]/80 group-hover:text-[#3D550C] leading-[100%] tracking-normal font-spartan text-left transition-colors duration-300">
                   {step.description}
                 </p>
               </div>

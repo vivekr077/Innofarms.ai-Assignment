@@ -34,7 +34,7 @@ export default function FeedbackFromChefs() {
           {feedbacks.map((feedback, index) => (
             <div
               key={index}
-              className="rounded-[30px] overflow-hidden transition-shadow duration-300 flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)] max-w-[400px] flex flex-col"
+              className="group rounded-[30px] overflow-hidden transition-all duration-300 flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)] max-w-[400px] flex flex-col hover:scale-105 hover:shadow-xl cursor-pointer"
             >
               {/* Image - Rounded on all corners */}
               <div className="w-full h-[250px] overflow-hidden rounded-[30px]">
@@ -43,13 +43,13 @@ export default function FeedbackFromChefs() {
                   alt={feedback.title}
                   width={400}
                   height={250}
-                  className="object-cover w-full h-full rounded-[30px]"
+                  className="object-cover w-full h-full rounded-[30px] transition-transform duration-500 group-hover:scale-110"
                   priority={index < 2}
                 />
               </div>
 
               {/* Title Below Image */}
-              <h3 className="text-xl md:text-2xl font-medium text-[#3D550C] mt-6 text-center font-signika">
+              <h3 className="text-xl md:text-2xl font-medium text-[#3D550C] mt-6 text-center font-signika group-hover:text-[#2d3f0a] transition-colors duration-300">
                 {feedback.title}
               </h3>
             </div>

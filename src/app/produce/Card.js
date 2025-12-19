@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Card({ image, alt, category, productName, description, nutritionInfoHref, arrowHref }) {
   return (
-    <div className="rounded-[30px] overflow-visible flex flex-col relative">
+    <div className="group rounded-[30px] overflow-visible flex flex-col relative hover:scale-105 transition-all duration-300 cursor-pointer">
       {/* Card Background Image with Color Overlay */}
       <div 
         className="absolute inset-0 rounded-[30px] overflow-hidden"
@@ -23,9 +23,9 @@ export default function Card({ image, alt, category, productName, description, n
           src="/OurProduce/Background.png"
           alt="Card background"
           fill
-          className="object-cover rounded-[30px]"
+          className="object-cover rounded-[30px] transition-transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-[#DCBC8870]/44 rounded-[30px]"></div>
+        <div className="absolute inset-0 bg-[#DCBC8870]/44 rounded-[30px] transition-opacity duration-300 group-hover:bg-[#DCBC8870]/60"></div>
       </div>
 
       {/* Product Image Area */}
@@ -36,7 +36,7 @@ export default function Card({ image, alt, category, productName, description, n
             alt={alt}
             width={396.66}
             height={293.63}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
             priority
           />
         </div>
@@ -46,26 +46,26 @@ export default function Card({ image, alt, category, productName, description, n
       <div className="relative z-10 px-6 pb-4 flex flex-col flex-1">
         {/* Category Label */}
         <div className="flex items-center gap-2 mb-2">
-          <span className="w-2 h-2 bg-[#3D550C] rounded-full"></span>
-          <span className="text-sm font-normal text-[#3D550C] font-signika uppercase tracking-wide">
+          <span className="w-2 h-2 bg-[#3D550C] rounded-full transition-all duration-300 group-hover:scale-125 group-hover:bg-[#2d3f0a]"></span>
+          <span className="text-sm font-normal text-[#3D550C] font-signika uppercase tracking-wide transition-colors duration-300 group-hover:text-[#2d3f0a]">
             {category}
           </span>
         </div>
 
         {/* Product Name */}
-        <h3 className="text-xl md:text-[26px] font-medium text-[#E3572B] font-signika leading-tight">
+        <h3 className="text-xl md:text-[26px] font-medium text-[#E3572B] font-signika leading-tight transition-colors duration-300 group-hover:text-[#D2691E]">
           {productName}
         </h3>
-        <hr className="my-2 border-t-2 border-[#404A3D1A]"/>
+        <hr className="my-2 border-t-2 border-[#404A3D1A] transition-colors duration-300 group-hover:border-[#404A3D]/40"/>
         {/* Description */}
-        <p className="text-sm md:text-base font-normal max-w-[90%] line-clamp-2 text-[#666666] mb-4 mt-1 font-roboto leading-relaxed">
+        <p className="text-sm md:text-base font-normal max-w-[90%] line-clamp-2 text-[#666666] mb-4 mt-1 font-roboto leading-relaxed transition-colors duration-300 group-hover:text-[#404A3D]">
           {description}
         </p>
 
         {/* Nutrition Info Button - Half inside, half outside */}
         <Link
           href={arrowHref || "#"}
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-[#E3572B] border border-[#A5E32B] text-white px-6 py-3 rounded-full hover:bg-[#D2691E] transition-colors duration-300 font-medium text-base md:text-lg text-center font-outfit z-10 whitespace-nowrap"
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-[#E3572B] border border-[#A5E32B] text-white px-6 py-3 rounded-full hover:bg-[#D2691E] group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 font-medium text-base md:text-lg text-center font-outfit z-10 whitespace-nowrap"
         >
           Nutrition Info
         </Link>
@@ -74,14 +74,14 @@ export default function Card({ image, alt, category, productName, description, n
       {/* Arrow Icon - Bottom Right in the space of the shape */}
       <Link
         href={arrowHref || "#"}
-        className="absolute bottom-0 right-0 w-6 h-6 sm:w-8 sm:h-8 md:w-8 md:h-8 lg:w-12 lg:h-12 bg-[#3D550C] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity shadow-sm z-20"
+        className="absolute bottom-0 right-0 w-6 h-6 sm:w-8 sm:h-8 md:w-8 md:h-8 lg:w-12 lg:h-12 bg-[#3D550C] rounded-full flex items-center justify-center hover:opacity-80 group-hover:scale-110 group-hover:bg-[#2d3f0a] group-hover:shadow-lg transition-all duration-300 shadow-sm z-20"
       >
         <Image
           src="/OurProduce/arrowicon.svg"
           alt="Arrow icon"
           width={20}
           height={20}
-          className="w-4 h-4 sm:w-[14px] sm:h-[14px] md:w-[16px] md:h-[16px] lg:w-5 lg:h-5"
+          className="w-4 h-4 sm:w-[14px] sm:h-[14px] md:w-[16px] md:h-[16px] lg:w-5 lg:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
         />
       </Link>
     </div>

@@ -34,22 +34,22 @@ export default function SubscriptionPlans() {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className="bg-[#DCBC8870]/80 rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col items-center justify-center w-full sm:w-[280px] md:w-[300px] lg:w-auto lg:min-w-[280px] lg:max-w-[320px] shadow-[0_4px_14px_0_rgba(28,66,161,0.04)]"
+              className="group bg-[#DCBC8870]/80 rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col items-center justify-center w-full sm:w-[280px] md:w-[300px] lg:w-auto lg:min-w-[280px] lg:max-w-[320px] shadow-[0_4px_14px_0_rgba(28,66,161,0.04)] hover:scale-105 hover:shadow-xl hover:bg-[#DCBC88]/90 transition-all duration-300 cursor-pointer"
             >
               {/* Plan Name */}
-              <h3 className="text-3xl md:text-4xl font-bold text-[#3D550C] font-archivo text-center">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#3D550C] font-archivo text-center transition-colors duration-300 group-hover:text-[#2d3f0a]">
                 {plan.name}
               </h3>
 
               {/* Duration */}
-              <p className="text-xl md:text-2xl font-normal text-[#3D550C] font-archivo text-center mb-6">
+              <p className="text-xl md:text-2xl font-normal text-[#3D550C] font-archivo text-center mb-6 transition-colors duration-300 group-hover:text-[#2d3f0a]">
                 {plan.duration}
               </p>
 
               {/* Enquire Now Button */}
               <Link
                 href="#subscription-form"
-                className="bg-[#3D550C] text-white px-12 py-1 rounded-lg hover:bg-[#2d3f0a] transition-colors duration-300 font-medium text-base md:text-lg font-outfit"
+                className="bg-[#3D550C] text-white px-12 py-1 rounded-lg hover:bg-[#2d3f0a] group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 font-medium text-base md:text-lg font-outfit"
               >
                 Enquire Now
               </Link>

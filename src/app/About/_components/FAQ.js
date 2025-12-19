@@ -54,13 +54,13 @@ export default function FAQ() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border-none bg-[#DCBC88] rounded-lg overflow-hidden shadow-sm"
+                className="group border-none bg-[#DCBC88] rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
               >
-                <AccordionTrigger className="px-6 py-4 text-left font-bold text-[#1E1E1E] hover:no-underline font-outfit text-xl md:text-2xl">
+                <AccordionTrigger className="px-6 py-4 text-left font-bold text-[#1E1E1E] hover:no-underline font-outfit text-xl md:text-2xl transition-colors duration-300 group-hover:text-[#3D550C]">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 bg-white rounded-b-lg">
-                  <p className="text-lg md:text-xl text-[#313638] font-outfit leading-relaxed tracking-normal py-6">
+                  <p className="text-lg md:text-xl text-[#313638] font-outfit leading-relaxed tracking-normal py-6 transition-colors duration-300 group-hover:text-[#1E1E1E]">
                     {faq.answer}
                   </p>
                 </AccordionContent>

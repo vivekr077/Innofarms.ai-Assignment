@@ -5,12 +5,12 @@ export default function CropJourney() {
     <section id="traceability-content" className="w-full pt-12 md:pt-16 pb-8 lg:pt-20 bg-white">
       <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">
         {/* Main Heading */}
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-spartan text-[#3D550C] text-center mb-2 mt-10">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-spartan text-[#3D550C] text-center mb-2 mt-10 transition-transform duration-300 hover:scale-105 cursor-default">
           Scan to Explore the Crop Journey
         </h2>
 
         {/* Subheading */}
-        <p className="text-base md:text-lg lg:text-xl font-normal text-[#1E1E1E]/80 text-center mb-10 md:mb-10 font-spartan">
+        <p className="text-base md:text-lg lg:text-xl font-normal text-[#1E1E1E]/80 text-center mb-10 md:mb-10 font-spartan transition-colors duration-300 hover:text-[#1E1E1E] cursor-default">
           Enabling complete end-to-end visibility across every stage of the process.
         </p>
 
@@ -18,38 +18,38 @@ export default function CropJourney() {
         <div className="max-w-[1264px] mx-auto">
           {/* Image Gallery - Three Images */}
           <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center mb-8 md:mb-8">
-            <div className="relative w-full md:w-1/3 max-w-[400px] rounded-lg overflow-hidden shadow-lg">
+            <div className="group relative w-full md:w-1/3 max-w-[400px] rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
               <Image
                 src="/Traceability/img1.jpg"
                 alt="Chefs with produce boxes"
                 width={400}
                 height={380}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
-            <div className="relative w-full md:w-1/3 max-w-[400px] rounded-lg overflow-hidden shadow-lg">
+            <div className="group relative w-full md:w-1/3 max-w-[400px] rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
               <Image
                 src="/Traceability/img2.jpg"
                 alt="Produce boxes with QR codes"
                 width={400}
                 height={380}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
-            <div className="relative w-full md:w-1/3 max-w-[400px] rounded-lg overflow-hidden shadow-lg">
+            <div className="group relative w-full md:w-1/3 max-w-[400px] rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
               <Image
                 src="/Traceability/img3.jpg"
                 alt="Chef holding produce box"
                 width={400}
                 height={380}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
           </div>
 
           {/* Descriptive Paragraph */}
-          <div className="w-full">
-            <p className="text-base md:text-lg font-normal text-[#666666] font-roboto leading-relaxed text-left">
+          <div className="w-full group">
+            <p className="text-base md:text-lg font-normal text-[#666666] font-roboto leading-relaxed text-left transition-colors duration-300 group-hover:text-[#404A3D]">
               Transparency is at the heart of Fresh From The Future. Each pack carries a Traceability QR Code that unlocks the full story of your greens; where they were grown, the seed used, when they were planted, transplanted, and harvested, how their health improved over time, and the positive environmental impact along the way.
             </p>
           </div>

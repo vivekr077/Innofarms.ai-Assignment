@@ -92,17 +92,17 @@ export default function BabyGreens() {
     <section className="w-full bg-white py-12 md:py-12 lg:py-12">
       <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">
         {/* Main Heading */}
-        <h2 className="text-3xl md:text-4xl lg:text-[54px] font-bold font-spartan text-[#3D550C] text-center">
+        <h2 className="text-3xl md:text-4xl lg:text-[54px] font-bold font-spartan text-[#3D550C] text-center transition-transform duration-300 hover:scale-105 cursor-default">
           Baby Greens
         </h2>
         {/* Subheading */}
-        <p className="text-base md:text-lg lg:text-2xl font-normal text-[#1E1E1E]/80 text-center mb-12 md:mb-12 font-spartan">
+        <p className="text-base md:text-lg lg:text-2xl font-normal text-[#1E1E1E]/80 text-center mb-12 md:mb-12 font-spartan transition-colors duration-300 hover:text-[#1E1E1E] cursor-default">
           Grown with precision for unmatched flavor and quality.
         </p>
         {/* Cards Container - Horizontal Scroll (scrollbar hidden) */}
         <div 
           ref={scrollContainerRef}
-          className="overflow-x-auto overflow-y-visible pb-8 scrollbar-hide lg:max-w-[1286px] lg:mx-auto"
+          className="overflow-x-auto overflow-y-visible pb-8 pt-4 scrollbar-hide lg:max-w-[1286px] lg:mx-auto"
           style={{
             scrollbarWidth: "none",
             msOverflowStyle: "none",
@@ -113,9 +113,9 @@ export default function BabyGreens() {
               display: none;
             }
           `}</style>
-          <div className="flex gap-6 md:gap-8 min-w-max px-4 items-start">
+          <div className="flex gap-6 md:gap-8 min-w-max px-4 items-start py-4">
             {products.map((product, index) => (
-              <div key={index} className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[396.66px]">
+              <div key={index} className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[396.66px] py-4">
                 <Card
                   image={product.image}
                   alt={product.alt}
@@ -135,8 +135,8 @@ export default function BabyGreens() {
             <button
               key={index}
               onClick={() => handleDotClick(index)}
-              className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                activeDot === index ? "bg-[#3D550C]" : "bg-gray-300"
+              className={`w-2 h-2 rounded-full transition-all duration-300 hover:scale-125 ${
+                activeDot === index ? "bg-[#3D550C]" : "bg-gray-300 hover:bg-[#3D550C]/50"
               }`}
               aria-label={`Navigate to section ${index + 1}`}
             />

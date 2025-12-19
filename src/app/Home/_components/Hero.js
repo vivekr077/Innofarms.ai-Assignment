@@ -40,13 +40,13 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Link
                 href="/book-tasting"
-                className="px-6 py-3 border-2 border-[#DCBC88] text-[#DCBC88] bg-transparent rounded-full hover:bg-[#DCBC88] hover:text-white transition-colors text-center font-medium font-outfit whitespace-nowrap"
+                className="px-6 py-3 border-2 border-[#DCBC88] text-[#DCBC88] bg-transparent rounded-full hover:bg-[#DCBC88] hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300 text-center font-medium font-outfit whitespace-nowrap"
               >
                 Book A Chef Tasting
               </Link>
               <Link
                 href="/produce"
-                className="px-6 py-3 border-2 border-[#DCBC88] text-[#DCBC88] bg-transparent rounded-full hover:bg-[#DCBC88] hover:text-white transition-colors text-center font-medium font-outfit whitespace-nowrap"
+                className="px-6 py-3 border-2 border-[#DCBC88] text-[#DCBC88] bg-transparent rounded-full hover:bg-[#DCBC88] hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300 text-center font-medium font-outfit whitespace-nowrap"
               >
                 Explore Our Produce
               </Link>
@@ -60,14 +60,14 @@ export default function Hero() {
 
           {/* Right Side - Image Content */}
           <div className=" max-lg:hidden relative flex justify-center lg:justify-end col-span-1 justify-self-end w-full">
-            <div className="relative w-full">
-              <div className="relative rounded-lg shadow-2xl overflow-hidden">
+            <div className="relative w-full group">
+              <div className="relative rounded-lg shadow-2xl overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:scale-105">
                 <Image
                   src="/Home/homebannerimg.png"
                   alt="Chef preparing fresh produce"
                   width={600}
                   height={800}
-                  className="object-cover w-full h-auto"
+                  className="object-cover w-full h-auto transition-transform duration-700 group-hover:scale-110"
                   priority
                 />
               </div>

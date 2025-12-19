@@ -44,18 +44,18 @@ export default function FeedbackFromChefs() {
           {feedbacks.map((feedback, index) => (
             <div
               key={index}
-              className="rounded-[10px] overflow-hidden transition-shadow duration-300 flex flex-col w-full"
+              className="group rounded-[10px] overflow-hidden transition-all duration-300 flex flex-col w-full hover:scale-105 hover:shadow-xl cursor-pointer"
             >
               <div className="relative w-full h-[208px] md:h-[208px] overflow-hidden rounded-[10px]">
                 <Image
                   src={feedback.image}
                   alt={feedback.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                   priority={index < 3}
                 />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#3D550C] mt-4 text-center font-spartan">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#3D550C] mt-4 text-center font-spartan group-hover:text-[#2d3f0a] transition-colors duration-300">
                 {feedback.title}
               </h3>
             </div>

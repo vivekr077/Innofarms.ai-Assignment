@@ -43,7 +43,7 @@ export default function GreensLeadingTrend() {
           {greens.map((green, index) => (
             <div
               key={index}
-              className=" rounded-[30px] overflow-hidden transition-shadow duration-300 flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] max-w-[320px] flex flex-col"
+              className="group rounded-[30px] overflow-hidden transition-all duration-300 flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] max-w-[320px] flex flex-col hover:scale-105 hover:shadow-xl cursor-pointer"
             >
               {/* Image - Rounded on all corners */}
               <div className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-[30px]">
@@ -52,7 +52,7 @@ export default function GreensLeadingTrend() {
                   alt={green.title}
                   width={400}
                   height={400}
-                  className="object-cover w-full h-full rounded-[30px]"
+                  className="object-cover w-full h-full rounded-[30px] transition-transform duration-500 group-hover:scale-110"
                   priority={index < 2}
                 />
               </div>
@@ -61,21 +61,21 @@ export default function GreensLeadingTrend() {
               <div className="p-6 flex-1 flex flex-col">
                 {/* Category */}
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="w-2 h-2 bg-[#5B8C51] rounded-full"></span>
-                  <span className="text-xs md:text-sm font-normal text-[#999999] font-signika uppercase tracking-wide">
+                  <span className="w-2 h-2 bg-[#5B8C51] rounded-full group-hover:bg-[#3D550C] transition-colors duration-300"></span>
+                  <span className="text-xs md:text-sm font-normal text-[#999999] group-hover:text-[#3D550C] font-signika uppercase tracking-wide transition-colors duration-300">
                     {green.category}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg md:text-2xl font-medium text-[#404A3D] mb-2 font-signika">
+                <h3 className="text-lg md:text-2xl font-medium text-[#404A3D] mb-2 font-signika group-hover:text-[#3D550C] transition-colors duration-300">
                   {green.title}
                 </h3>
 
                 {/* Peek Inside Button */}
                 <Link
                   href={`/greens/${green.title.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="flex items-center justify-center gap-3 bg-[#D2B284] text-[#404A3D] py-0.5 rounded-md hover:bg-[#C9A86A] transition-colors duration-300 font-medium font-signika text-sm md:text-base w-1/2"
+                  className="flex items-center justify-center gap-3 bg-[#D2B284] text-[#404A3D] py-0.5 rounded-md hover:bg-[#C9A86A] group-hover:bg-[#3D550C] group-hover:text-white transition-all duration-300 font-medium font-signika text-sm md:text-base w-1/2 transform group-hover:translate-x-1"
                 >
                   Peek Inside
                   <Image
@@ -83,7 +83,7 @@ export default function GreensLeadingTrend() {
                     alt="Arrow icon"
                     width={14}
                     height={14}
-                    className="w-3.5 h-3.5"
+                    className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"
                   />
                 </Link>
               </div>

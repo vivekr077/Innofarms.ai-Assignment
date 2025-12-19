@@ -46,7 +46,7 @@ export default function SubscribeBanner() {
           <div className="flex-shrink-0">
             <Link
               href="/subscription"
-              className="inline-block bg-white text-[#404A3D] px-6 md:px-8 lg:px-8 py-3 md:py-4 rounded-full hover:bg-[#F9F9F9] transition-colors duration-300 font-medium text-base font-signika whitespace-nowrap"
+              className="inline-block bg-white text-[#404A3D] px-6 md:px-8 lg:px-8 py-3 md:py-4 rounded-full font-medium text-base font-signika whitespace-nowrap"
             >
               Subscribe
             </Link>

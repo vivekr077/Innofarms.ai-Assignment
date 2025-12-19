@@ -58,34 +58,34 @@ export default function TechnologyCultivates() {
             return (
             <div
               key={index}
-              className={`bg-[#DCBC88]/44 rounded-lg p-6 transition-shadow duration-300 flex-shrink-0 ${cardWidth} max-w-[400px]`}
+              className={`group bg-[#DCBC88]/44 rounded-lg p-6 transition-all duration-300 flex-shrink-0 ${cardWidth} max-w-[400px] hover:scale-105 hover:shadow-xl hover:bg-[#DCBC88]/60 cursor-pointer`}
             >
               {/* Logo and Title Row */}
               <div className="flex items-center gap-2 mb-2 justify-center">
                 {/* Logo with Background */}
-                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-[#3D550C] flex items-center justify-center">
+                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-[#3D550C] flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                   <Image
                     src={tech.logo}
                     alt={tech.title}
                     width={56}
                     height={56}
-                    className="w-12 h-12 object-contain"
+                    className="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
                 
                 {/* Title and Subtitle */}
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-medium text-[#404A3D] mb-1 font-signika">
+                  <h3 className="text-xl md:text-2xl font-medium text-[#404A3D] mb-1 font-signika group-hover:text-[#3D550C] transition-colors duration-300">
                     {tech.title}
                   </h3>
                 </div>
               </div>
 
-              <p className="text-lg md:text-xl font-normal text-[#1E1E1E] font-signika">
+              <p className="text-lg md:text-xl font-normal text-[#1E1E1E] font-signika group-hover:text-[#2d3f0a] transition-colors duration-300">
                     {tech.subtitle}
                   </p>
               {/* Description */}
-              <p className="text-lg md:text-xl text-[#404A3DCC]/80 leading-relaxed font-roboto">
+              <p className="text-lg md:text-xl text-[#404A3DCC]/80 leading-relaxed font-roboto group-hover:text-[#404A3D] transition-colors duration-300">
                 {tech.description}
               </p>
             </div>
